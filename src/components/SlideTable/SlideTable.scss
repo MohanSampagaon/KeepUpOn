@@ -1,0 +1,109 @@
+.dashboard {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Toggle Button Styling */
+.toggle-button {
+  position: fixed;
+  top: 200px;
+  right: 0;
+  z-index: 1000;
+  border-radius: 0;
+  font-size: 1.5em;
+  width: 50px;
+  padding: 0;
+  height: 100px;
+  background-color: lightgray;
+  border-top-left-radius: 70px;
+  border-bottom-left-radius: 70px;
+}
+
+/* Table Container Styling */
+.table-container {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  /* Initially hidden off-screen */
+  width: 99%;
+  height: 100%;
+  background-color: white;
+  overflow-y: auto;
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+}
+
+/* Table Visible */
+.table-container.visible {
+  right: 0;
+  /* Slides in */
+}
+
+.arrow-container {
+  overflow: hidden;
+  width: 90px;
+  position: relative;
+  height: 80px;
+  background-color: lightgray;
+  border-top-left-radius: 70px;
+  border-bottom-left-radius: 70px;
+}
+
+.arrowLeft {
+  position: absolute;
+  color: dodgerblue;
+  font-size: 3.5rem;
+  animation: slideRight 1.5s linear infinite;
+}
+
+.arrowRight {
+  position: absolute;
+  color: dodgerblue;
+  font-size: 3.5rem;
+  animation: slideLeft 1.5s linear infinite;
+}
+
+@keyframes slideLeft {
+  0% {
+    right: -50px;
+    /* Start off-screen on the right */
+  }
+
+  100% {
+    right: 100%;
+    /* Move off-screen to the left */
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    left: -50px;
+    /* Start off-screen on the right */
+  }
+
+  100% {
+    left: 100%;
+    /* Move off-screen to the left */
+  }
+}
+
+.bg-EE, .bg-LR, .bg-LC {
+  // background-color: #44b049 !important;
+  background: linear-gradient(to right, #b7efc5, #2dc653);
+}
+.bg-ME, .bg-MR, .bg-MC {
+  // background-color: #eebb46 !important;
+  background: linear-gradient(to right, #ff9a68, #FF681E);
+}
+.bg-DE, .bg-HR, .bg-HC {
+  // background-color: #e55459 !important;
+  background: linear-gradient(to right, #f98888, #ff4545);
+}
+
+// Light green: #90EE90
+// Dark green: #013220
+// Lime green: #32CD32
+// Forest green: #243407
+// Sage green: #B2AC88
+// Olive green: #BAB86C
+// Army green: #4B5320

@@ -1,0 +1,10 @@
+@import "./colors";
+$font-size-base: 14px;
+$line-height-base: 1.5;
+$nav-link-height: 36px; 
+$body-font-size: $font-size-base;
+$display-font-style: normal;
+$display-font-weight: 500;
+$font-weight: $display-font-weight;
+
+@import "bootstrap/scss/bootstrap";
